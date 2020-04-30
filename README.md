@@ -36,11 +36,14 @@ with open(receiver.filename, "w") as file:
 ## Exceptions  
 May raise exceptions in the following cases:  
 
-#### NoWRQPacket  
+**NoWRQPacket**  
+
 If the connected client tried to perform a non-WRQ operation (data recording).  
 
-#### NoIncomingConnection  
+**NoIncomingConnection**  
+
 If there were no connections in the allotted time.  
 
-#### ErrorReceived  
+**ErrorReceived**  
+
 If error packet was received from client.  
