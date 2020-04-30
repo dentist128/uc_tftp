@@ -11,20 +11,23 @@ from uc_tftp import TFTPReceiver
 ```
 
 ## Examples:  
-#### as iterator  
+**as iterator**  
+
 ```python
 receiver = TFTPReceiver(timeout=3)  
 for data in receiver:  
 	print(data)  
 ```
 
-#### as function  
+**as function**  
+
 ```python
 receiver = TFTPReceiver(timeout=3)  
 receiver.recvto("/path/to/destination")  
 ```
 
-#### with filename
+**with filename**
+
 ```python
 receiver = TFTPReceiver(timeout=3)  
 receiver.open()  
