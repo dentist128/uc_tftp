@@ -21,6 +21,8 @@
 # Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 """
 The build script for setuptools.
+
+TODO: class TFTPSender for simple send file via tftp.
 """
 import os
 import sys
@@ -192,8 +194,7 @@ class TFTPReceiver:
             else:
                 # TODO: Send to client notification of unexpected packet.
                 # TODO: close socket
-                #self.sock.sendto()
-                raise StopIteration
+                raise Exception("Unexpected opcode received.")
         else:
             # TODO: close socket in native function
             if self.sock is not None:

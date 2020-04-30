@@ -6,6 +6,13 @@ It is part of the Unicon project.
 https://unicon.10k.me
 
 #### Usage:
+
+##### Install
+```sh
+pip install --user uc-tftp
+```
+##### and use
+
 ```python
 from uc_tftp import TFTPReceiver
 ```

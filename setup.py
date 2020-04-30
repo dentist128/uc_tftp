@@ -34,7 +34,7 @@ setuptools.setup(
     version="0.0.1",
     author="Eduard S. Markelov",
     author_email="markeloveduard@gmail.com",
-    description="Simple tftp file receiver.",
+    description="Implementation of classes and functions for working with files via tftp.",
     long_description=LONG_DESCRIPTION,
     long_description_content_type="text/markdown",
     url="https://github.com/dentist128/uc_tftp",
