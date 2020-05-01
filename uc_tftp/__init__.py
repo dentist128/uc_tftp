@@ -22,7 +22,7 @@
 """
 The build script for setuptools.
 
-TODO: class TFTPSender for simple send file via tftp.
+TODO: class TFTPSender for sending file via tftp.
 """
 import os
 import sys
@@ -64,6 +64,14 @@ class ErrorReceived(Exception):
     """
     def __init__(self, errorcode, errormsg):
         super(ErrorReceived, self).__init__("Error received: (%d) %s", errorcode, errormsg)
+
+
+class UnexpectedOpcode(Exception):
+    """
+    Implementing an exception for unexpected opcode.
+    """
+    def __init__(self):
+        super(UnexpectedOpcode, self).__init__("Unexpected opcode received.")
 
 
 class TFTPReceiver:
@@ -192,11 +200,8 @@ class TFTPReceiver:
                 errormsg = self.__readstring(data[4:])
                 raise ErrorReceived(errorcode, errormsg)
             else:
-                # TODO: Send to client notification of unexpected packet.
-                # TODO: close socket
-                raise Exception("Unexpected opcode received.")
+                raise UnexpectedOpcode()
         else:
-            # TODO: close socket in native function
             if self.sock is not None:
                 self.sock.close()
             raise StopIteration

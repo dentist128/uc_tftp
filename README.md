@@ -57,3 +57,7 @@ If there were no connections in the allotted time.
 **ErrorReceived**  
 
 If error packet was received from client.  
+
+**UnexpectedOpcode**
+
+If an unexpected opcode is received during data transfer.
